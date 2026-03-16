@@ -1,37 +1,44 @@
-# AI Nutrition Planner
+# AI Nutrition Planner 🥗💪
 
-AI Nutrition Planner is a beginner-friendly Streamlit web application that guides the user through separate pages and then gives personalized nutrition recommendations.
+AI Nutrition Planner is a Streamlit-based web application that generates personalized nutrition recommendations based on user body details, workout activity, and training goals.
 
-The app uses rule-based logic to estimate:
+The application guides users through multiple pages and calculates daily calorie needs, macronutrient distribution, and meal suggestions.
 
-- Daily calorie needs
-- Calories burned from exercise
-- Protein intake
-- Carbohydrate intake
-- Fat intake
-- 3-meal nutrient split
-- 3 food choices for each meal with recipe steps
+## Live Demo 🚀
+
+Try the deployed application here:
+
+🔗 **AI Nutrition Planner:**
+https://ai-nutrition-planner-1.onrender.com
+
+---
+
+## Tech Stack
+
+* Python
+* Streamlit
+* MySQL
+* SQL
+* Rule-based nutrition calculation
+
+---
 
 ## Features
 
-- Easy-to-use web interface
-- Minimal custom UI theme
-- 5-page guided workflow
-- Personal profile saved once
-- Multi-user sign up and login with MySQL
-- Automatic next-page flow after save
-- Back button at the bottom of each page
-- Exercise, sets, and reps based calorie estimation
-- Simple nutrition calculations
-- Daily nutrients divided into breakfast, lunch, and dinner targets
-- 3 suggested food choices for breakfast, lunch, and dinner
-- Indian recipe suggestions with quantitative ingredients
-- Beginner-friendly Python project structure
-- Clean and well-commented code
+* Multi-user sign up and login with MySQL
+* 5-page guided workflow
+* Exercise-based calorie estimation
+* Daily calorie requirement calculation
+* Macronutrient recommendation (Protein, Carbs, Fat)
+* Meal nutrient split for breakfast, lunch, and dinner
+* Indian meal suggestions with recipe steps
+* Clean and beginner-friendly project structure
+
+---
 
 ## Project Structure
 
-```text
+```
 ai-nutrition-planner/
 |-- app.py
 |-- logic.py
@@ -45,9 +52,9 @@ ai-nutrition-planner/
 `-- images/
 ```
 
-## App Pages
+---
 
-The app is divided into 5 pages:
+## App Pages
 
 1. Login page
 2. Body details page
@@ -55,43 +62,42 @@ The app is divided into 5 pages:
 4. Suggested food names page
 5. Recipe page
 
+---
+
 ## Inputs
 
-The user enters:
+The user provides:
 
-- Name
-- Email
-- Phone number
-- Password
-- Gender
-- Height
-- Weight
-- Purpose of training
-- Number of exercises done
-- Each exercise type
-- Each exercise name
-- Reps per set for each exercise
-- Number of sets for each exercise
+* Name
+* Email
+* Phone number
+* Password
+* Gender
+* Height
+* Weight
+* Training goal
+* Exercises performed
+* Sets and repetitions
+
+---
 
 ## How the Logic Works
 
-The app follows a simple rule-based approach:
+1. Estimate daily calorie requirement from body weight
+2. Adjust calories using height and training goal
+3. Calculate calories burned from exercises
+4. Combine total energy expenditure
+5. Split calories into macronutrients
+6. Generate breakfast, lunch, and dinner suggestions
+7. Provide Indian recipe steps for selected meals
 
-1. Estimate daily calorie requirement from weight
-2. Add a small adjustment for height
-3. Log multiple exercises for the day
-4. Estimate calories burned for each exercise from its type, sets, reps, and body weight
-5. Add total calories burned into the nutrition plan
-6. Adjust calories for the selected goal
-7. Split calories into protein, carbs, and fats
-8. Suggest 3 Indian food choices for breakfast, lunch, and dinner
-9. Show the recipes for the selected breakfast, lunch, and dinner foods
+---
 
 ## MySQL Setup
 
-Set these environment variables before running the app:
+Set these environment variables:
 
-```bash
+```
 MYSQL_HOST=localhost
 MYSQL_PORT=3306
 MYSQL_USER=root
@@ -99,47 +105,64 @@ MYSQL_PASSWORD=your_password
 MYSQL_DATABASE=ai_nutrition_planner
 ```
 
-The app will automatically create the database and `users` table if they do not exist.
+The application automatically creates the database and `users` table if they do not exist.
+
+---
 
 ## Installation
 
-1. Create and activate a virtual environment:
+Create virtual environment
 
-```bash
+```
 python -m venv venv
 ```
 
-### Windows
+Activate environment
 
-```bash
+Windows:
+
+```
 venv\Scripts\activate
 ```
 
-### macOS / Linux
+macOS / Linux:
 
-```bash
+```
 source venv/bin/activate
 ```
 
-2. Install dependencies:
+Install dependencies
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
-## Run the App
+Run the application
 
-```bash
+```
 streamlit run app.py
 ```
 
+---
+
 ## Example Use Cases
 
-- Someone trying to lose weight and stay in a calorie deficit
-- Someone training for muscle gain and needing more protein
-- Someone who wants to log multiple exercises and see calories burned for each one
-- Someone who wants a quick estimate for maintenance calories
+* Weight loss planning
+* Muscle gain nutrition estimation
+* Tracking exercise-based calorie expenditure
+* Quick maintenance calorie estimation
 
-## Important Note
+---
 
-This project is designed for learning and demonstration purposes. It does not replace advice from a doctor or registered dietitian.
+## Disclaimer
+
+This project is intended for educational purposes only and does not replace professional medical or dietary advice.
+
+---
+
+## Author
+
+**Miruthula Sri A**
+
+B.E Artificial Intelligence and Machine Learning
+
