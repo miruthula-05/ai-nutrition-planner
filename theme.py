@@ -66,6 +66,16 @@ def apply_theme() -> None:
             margin-bottom: 0.35rem;
         }
 
+        .stRadio > label,
+        .stRadio [role="radiogroup"] label,
+        .stRadio [role="radiogroup"] label span,
+        .stRadio [role="radiogroup"] div,
+        .stRadio [data-testid="stMarkdownContainer"],
+        .stRadio [data-testid="stMarkdownContainer"] p,
+        .stRadio [data-testid="stMarkdownContainer"] span {
+            color: #000000 !important;
+        }
+
         div[data-testid="stFormSubmitButton"] button {
             background: #ffffff;
             color: #000000;
